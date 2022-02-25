@@ -1,0 +1,20 @@
+- defaultTab: nodes
+  description: ''
+  executionEnabled: true
+  group: group1
+  id: 47302119-79b6-4916-9fc4-7c4e4ba31aec
+  loglevel: INFO
+  name: Test1
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - script: touch /tmp/test
+    - description: Wait 50s
+      script: sleep 50
+    - script: echo $(date)>/tmp/date
+    keepgoing: false
+    strategy: node-first
+  uuid: 47302119-79b6-4916-9fc4-7c4e4ba31aec
