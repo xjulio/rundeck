@@ -12,9 +12,11 @@
   sequence:
     commands:
     - script: touch /tmp/test
+      description: step1
     - description: Wait 50s
       script: sleep 50
     - script: echo $(date)>/tmp/date
+      description: final step
     keepgoing: false
     strategy: node-first
   uuid: 47302119-79b6-4916-9fc4-7c4e4ba31aec
